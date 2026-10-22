@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management System</h1>
+
+    <!-- Q1: Display Students -->
+    <section>
+      <h2>Student List</h2>
+
+      <button id="loadBtn" type="button">Load Students</button>
+      <p id="listMessage" role="status" aria-live="polite"></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Course</th>
+          </tr>
+        </thead>
+        <tbody id="studentTable">
+          <tr>
+            <td colspan="5">Click Load Students to retrieve data.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Q2: Student Registration -->
+    <section>
+      <h2>Student Registration</h2>
+
+      <form id="studentForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" min="1" step="1" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="course">Course</label>
+        <input type="text" id="course" required>
+
+        <button type="submit">Register Student</button>
+      </form>
+
+      <p id="formMessage" role="status" aria-live="polite"></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
